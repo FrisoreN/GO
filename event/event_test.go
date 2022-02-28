@@ -2,6 +2,8 @@ package event
 
 import (
 	"testing"
+
+	"github.com/FrisoreN/GO/state"
 )
 
 func TestMoveItem(t *testing.T) {

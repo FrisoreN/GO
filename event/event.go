@@ -2,6 +2,8 @@ package event
 
 import (
 	"fmt"
+
+	"github.com/FrisoreN/GO/state"
 )
 
 func Put(item string) {
