@@ -6,8 +6,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/FrisoreN/Skole/tree/main/event"
-	"github.com/FrisoreN/Skole/tree/main/state"
+	"github.com/FrisoreN/GO/event"
+	"github.com/FrisoreN/GO/state"
 )
 
 func main() {

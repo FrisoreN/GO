@@ -3,7 +3,7 @@ package event
 import (
 	"testing"
 
-	"github.com/FrisoreN/Skole/tree/main/state"
+	"github.com/FrisoreN/GO/event"
 )
 
 func TestMoveItem(t *testing.T) {

@@ -2,8 +2,6 @@ package event
 
 import (
 	"fmt"
-
-	"github.com/FrisoreN/Skole/tree/main/state"
 )
 
 func Put(item string) {
