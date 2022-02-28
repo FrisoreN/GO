@@ -70,9 +70,9 @@ func response(input string) {
 		fmt.Println("")
 		fmt.Println("Gratulerer!")
 		fmt.Println("Alle kom seg over!")
-	} else if gState == "GameOver" {
+	} else if gState == "Du tapte" {
 		fmt.Println("")
-		fmt.Println("GameOver")
+		fmt.Println("Spillet er slutt")
 	} else {
 		GetInput()
 	}

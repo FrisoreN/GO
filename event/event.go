@@ -11,7 +11,7 @@ func Put(item string) {
 	BItem := state.BoatItem
 
 	if BItem == "" {
-		if item == "Kylling" {
+		if item == "kylling" {
 			if ky == mann && re != 1 && ko != 1 {
 				ky = 1
 			} else if ky == 1 {
@@ -19,11 +19,11 @@ func Put(item string) {
 			} else if ky == 0 && mann == 2 || mann == 0 && ky == 2 {
 				fmt.Println("Båten er på feil side")
 			} else {
-				fmt.Println("Båten har ikke plass")
+				fmt.Println("Båten er full")
 				return
 			}
 
-		} else if item == "Rev" {
+		} else if item == "rev" {
 			if re == mann && ky != 1 && ko != 1 {
 				re = 1
 			} else if re == 1 {
@@ -31,11 +31,11 @@ func Put(item string) {
 			} else if re == 0 && mann == 2 || mann == 0 && re == 2 {
 				fmt.Println("Båten er på feil side")
 			} else {
-				fmt.Println("Båten har ikke plass")
+				fmt.Println("Båten er full")
 				return
 			}
 
-		} else if item == "Korn" {
+		} else if item == "rorn" {
 			if ko == mann && ky != 1 && re != 1 {
 				ko = 1
 			} else if ko == 1 {
@@ -43,28 +43,28 @@ func Put(item string) {
 			} else if ko == 0 && mann == 2 || mann == 0 && ko == 2 {
 				fmt.Println("Båten er på feil side")
 			} else {
-				fmt.Println("Båten har ikke plass")
+				fmt.Println("Båten er full")
 				return
 			}
 
 		} else {
-			fmt.Println("Skrive feil, prøv igjen. Skriv Hjelp for flere commandoer")
+			fmt.Println("Skrive feil. Skriv Hjelp for flere commandoer")
 			return
 		}
 
 	} else if BItem != "" {
 
-		if item == "Kylling" {
+		if item == "kylling" {
 			ky = mann
 		}
-		if item == "Rev" {
+		if item == "rev" {
 			re = mann
 		}
-		if item == "Korn" {
+		if item == "korn" {
 			ko = mann
 		}
 	} else {
-		fmt.Println("Båten har bare plass til to om gangen.")
+		fmt.Println("Båten har bare plass til to objekter av om gangen.")
 	}
 
 	// Oppdater viewstate
@@ -83,14 +83,14 @@ func Crossriver() string {
 	state.ViewState(ky, re, ko, mann)
 
 	if ky == re && re == ko && re != mann {
-		fmt.Println("NEI NEI! PASS PÅ!!! Kyllingen spiste opp Kornet, og Reven spiste opp Kyllingen. Prøv Igjen!")
-		return "GameOver"
+		fmt.Println("Nei, PASS PÅ! Kyllingen har spiste opp kornet, og reven spiste opp kyllingen. Prøv på nytt!")
+		return "Du tapte"
 	} else if ky == re && re != mann {
-		fmt.Println("NEI NEI! PASS PÅ!!! Reven spiste Kyllingen. Prøv Igjen!")
-		return "GameOver"
+		fmt.Println("Nei, PASS PÅ! Reven spiste Kyllingen. Prøv på nytt!")
+		return "Du tapte"
 	} else if ky == ko && ko != mann {
-		fmt.Println("NEI NEI! PASS PÅ!!! Kyllingen spiste opp Kornet. Prøv Igjen!")
-		return "GameOver"
+		fmt.Println("Nei, PASS PÅ! Kyllingen spiste opp Kornet. Prøv på nytt!")
+		return "Du tapte"
 	} else {
 		return "Error"
 	}

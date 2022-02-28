@@ -71,9 +71,9 @@ func GetBoatitem() string {
 
 func GetWin() string {
 	if ky == 2 && re == 2 && ko == 2 && mann != 0 {
-		return "Win"
+		return Gratulerer! Du vant"
 	} else {
-		return "Nono"
+		return "Du tapte"
 	}
 
 }
