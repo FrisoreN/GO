@@ -2,8 +2,6 @@ package event
 
 import (
 	"testing"
-
-	"github.com/FrisoreN/GO/event"
 )
 
 func TestMoveItem(t *testing.T) {
@@ -27,3 +25,4 @@ func TestCross(t *testing.T) {
 	if got != wanted {
 		t.Errorf("Feil, fikk %q, ønsket %q.", got, wanted)
 	}
+}
